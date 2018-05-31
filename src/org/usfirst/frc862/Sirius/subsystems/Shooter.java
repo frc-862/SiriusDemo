@@ -50,8 +50,8 @@ public class Shooter extends Subsystem {
         // Set the default command for a subsystem here.
         // setDefaultCommand(new MySpecialCommand());
 
-        leftFly.set(PercentOutput, 0);
-        rightFly.set(PercentOutput, 0);
+    	leftFly.set(0);
+    	rightFly.set(0);
     }
 
     @Override
@@ -61,13 +61,18 @@ public class Shooter extends Subsystem {
     }
 
     public void startFlyWheels() {
-        leftFly.set(PercentOutput, 1);
-        rightFly.set(PercentOutput, -1);
+        leftFly.set(0.75);
+        rightFly.set(-0.75);
+    }
+    
+    public void intakeFlyWheels() {
+    	leftFly.set(-0.4);
+    	rightFly.set(0);
     }
 
     public void stopFlyWheels() {
-        leftFly.set(PercentOutput, 0);
-        rightFly.set(PercentOutput, 0);
+    	leftFly.set(0);
+    	rightFly.set(0);
     }
 
     public void unkick() {

@@ -54,10 +54,11 @@ public class RobotMap {
         driveTrainLeft2 = new VictorSP(3);
         LiveWindow.addActuator("DriveTrain", "Left2", (VictorSP) driveTrainLeft2);
         driveTrainLeft2.setInverted(false);
+        
         shooterLeftFly = new WPI_TalonSRX(5);
-        
-        
+        LiveWindow.addActuator("FlyWheels", "Left Fly", shooterLeftFly);
         shooterRightFly = new WPI_TalonSRX(4);
+        LiveWindow.addActuator("FlyWheels", "Right Fly", shooterRightFly);
         
         
         shooterDoubleSolenoid1 = new DoubleSolenoid(11, 2, 3);
